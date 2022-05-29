@@ -14,6 +14,18 @@ namespace _1
         {
             
 
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         static void dzifI1_1()
@@ -58,6 +70,42 @@ namespace _1
 
         static void dzMetanitArray1()
         {
+            //{{{1 , 2} , {3 , 4}} , {{4 , 5} , {6 , 7}} , {{7 , 8}, {9 , 10}} , {{10 , 11} , {12 , 13}}};
+            int[,,] mas = { { { 1, 2 },{ 3, 4 } },
+                { { 4, 5 }, { 6, 7 } },
+                { { 7, 8 }, { 9, 10 } },
+                { { 10, 11 }, { 12, 13 } }
+              };
+            var a = mas.GetUpperBound(0);
+            var b = mas.GetUpperBound(1);
+            var c = mas.GetUpperBound(2);
+
+
+            Console.Write("{");
+            for (int i = 0; i <= a; i++)
+            {
+                Console.Write("{");
+                for (int j = 0; j <= b; j++)
+                {
+                    Console.Write("{");
+                    for (int d = 0; d <= c; d++)
+                    {
+                        Console.Write(mas[i, j, d]);
+
+                        if (d < c)
+                            Console.Write(" , ");
+                    }
+                    Console.Write("}");
+                    if (j < b)
+                        Console.Write(" , ");
+
+                }
+                Console.Write("}");
+                if (i < c)
+                    Console.Write(" , ");
+
+            }
+            Console.Write("}");
 
         }
 
