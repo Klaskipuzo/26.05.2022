@@ -20,12 +20,6 @@ namespace _1
 
 
 
-
-
-
-
-
-
         }
 
         static void dzifI1_1()
@@ -108,8 +102,166 @@ namespace _1
             Console.Write("}");
 
         }
-
-
         
+        static void les0()
+        {
+            int[,] myArray = new int[,]
+            {
+                {1,2,3,4,5, },
+                {2,3,4,423,43},
+                { 5,4,3,2,1},
+                {5,234,3,2,2 },
+                { 3,4,5,6,7},
+            };
+
+            int height = myArray.GetLength(0);
+            int width = myArray.GetLength(1);
+
+            for (int x = 0; x < height; x++)
+            {
+                for (int y = 0; y < width; y++)
+                {
+                    Console.Write(myArray[x, y] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void les1()
+        {
+            int[,] myArray = new int[10, 6];
+
+            Random random = new Random();
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    myArray[i, j] = random.Next(0, 100);
+                }
+
+            }
+
+
+
+            for (int x = 0; x < myArray.GetLength(0); x++)
+            {
+                for (int y = 0; y < myArray.GetLength(1); y++)
+                {
+                    Console.Write(myArray[x, y] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void les3()
+        {
+            string[,] myArray = new string[2, 3];
+
+
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.WriteLine("Y: " + i + " X: " + j);
+                    myArray[i, j] = Console.ReadLine();
+                }
+
+            }
+
+
+
+            for (int x = 0; x < myArray.GetLength(0); x++)
+            {
+                for (int y = 0; y < myArray.GetLength(1); y++)
+                {
+                    Console.Write(myArray[x, y] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void dzC1_1()
+        {
+
+            //C1.1. Напечатать ряд чисел 20 в виде:
+
+            //20 20 20 20 20 20 20 20 20 20.
+
+            int num = 20;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = num; j <= 20; j++)
+                {
+                    Console.Write(j + " ");
+                }
+            }
+        }
+
+        static void dzC1_2()
+        {
+            //C1.2. Составить программу вывода любого числа любое заданное число раз в виде, аналогичном показанному в предыдущей задаче.
+            var num = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = num; j <= num; j++)
+                {
+                    Console.WriteLine(j + " ");
+                }
+            }
+        }
+
+        static void dzMetanitfor1()
+        {
+            /*C1.3.Напечатать «столбиком»:
+            а) все целые числа от 20 до 35;
+            б) квадраты всех целых чисел от 10 до b(значение b вводится с клавиатуры; b > 10);
+            в) третьи степени всех целых чисел от a до 50(значение a вводится с клавиатуры; a < 50);
+            г) все целые числа от a до b(значения a и b вводятся с клавиатуры; b < a).*/
+
+
+            /* (a)
+            for (int i = 20; i <= 35; i++)
+            {
+                Console.WriteLine(i);
+            }
+            */
+
+            /* (b)
+            var b = int.Parse(Console.ReadLine());
+
+            for (int i = 10; i <= b; i++)
+            {
+                Console.WriteLine(i * i);
+            }
+            */
+
+            /* (v)
+            var a = int.Parse(Console.ReadLine());
+
+            for (int i = a; i <= 50; i++)
+            {
+                Console.WriteLine(i * i * i);
+            }
+            */
+            Console.WriteLine("Введите дипазон чисел");
+            var a = int.Parse(Console.ReadLine());
+            var b = int.Parse(Console.ReadLine());
+
+            for (int i = a; i <= b; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+
+        static void dzMetanitfor2()
+        {
+
+        }
+
+
     }
 }
