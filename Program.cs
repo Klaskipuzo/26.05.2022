@@ -12,14 +12,10 @@ namespace _1
     {
         static void Main(string[] args)
         {
+
             
 
-
-
-
-
-
-
+            
         }
 
         static void dzifI1_1()
@@ -257,10 +253,40 @@ namespace _1
 
         }
 
-        static void dzMetanitfor2()
+        static void dzforIfZ1_1()
         {
+            //Z1.1. Вывести на экран все целые числа от 100 до 200, кратные трем.
 
+            for (int i = 100; i <= 200; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
         }
+
+        static void dzforifZ1_2()
+        {
+            //Z1.2. Вывести на экран все целые числа от a до b, кратные некоторому числу c.
+            Console.WriteLine("Введите число первого диапазона");
+            var a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите число второго диапазона");
+            var b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите число третьего диапазона");
+            var c = int.Parse(Console.ReadLine());
+            for (int i = a; i <= b; i++)
+            {
+                if (i % c == 0)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+        }
+
+
 
 
     }
